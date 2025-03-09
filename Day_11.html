@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Template</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .parent {
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+grid-template-rows: repeat(5, 1fr);
+grid-column-gap: 10px;
+grid-row-gap: 10px;
+margin: 0.8rem;
+padding: 0.5rem;
+}
+
+.div1 { grid-area: 1 / 1 / 5 / 2; }
+.div2 { grid-area: 1 / 2 / 3 / 5; }
+.div3 { grid-area: 3 / 2 / 5 / 5; }
+
+.div1{
+    width: 30vw;
+    /* border: 2px solid gray; */
+    box-shadow: 2px 2px 5px 5px gray;
+    
+}
+
+.profileimg{
+    width: 100%;
+    height: 50vh;
+    position: relative;
+}
+.name{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 100;
+    position: absolute;
+    top: 40%;
+    
+}
+.details1{
+    display: flex;
+    align-items: center;
+    gap: 5%;
+}
+ .details{
+    padding: 10px;
+ }
+
+ .skills,.text{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: gray;
+    padding: 10px;
+ }
+
+ .div2{
+    /* border: 2px solid red; */
+    width: 60vw;
+    padding: 1.5rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-shadow: 2px 2px 5px 5px gray;
+ }
+
+ .mainfont{
+    color: gray;
+    font-weight: 400;
+ }
+ span{
+    background-color: #63E6BE;
+    padding: 2px;
+    align-items: center;
+    color: black;
+ }
+ .secondfont{
+    color: green;
+ }
+ .thirdfont{
+    color: black;
+    font-weight: 100;
+ }
+
+ .footer{
+    /* width: 100vw; */
+    background-color: #63E6BE;
+ }
+ 
+ 
+
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="div1">
+            <div class="profilecard">
+                <img class="profileimg" src="https://www.w3schools.com/w3images/avatar_hat.jpg" alt="no image found">
+                <h1 class="name">John Doe</h1>
+            </div>
+
+            <div class="details">
+                <div class="details1">
+                    <i class="fa-solid fa-briefcase" style="color: #63E6BE;" id="icon"></i>
+                    <p class="text">Designer</p>
+                </div>
+                <div class="details1">
+                    <i class="fa-solid fa-house" style="color: #63E6BE;"></i>
+                    <p class="text">London,UK</p>
+                </div>
+                <div class="details1">
+                    <i class="fa-solid fa-envelope" style="color: #63E6BE;"></i>
+                    <p class="text">ex@mail.com</p>
+                </div>
+                <div class="details1">
+                    <i class="fa-solid fa-phone" style="color: #63E6BE;"></i>
+                    <p class="text">12233445566</p>
+                </div>
+            </div>
+
+            <div class="skills">
+                <div style="display: flex; align-items: center; gap: 30px;">
+                    <i class="fa-solid fa-certificate" style="color: #63E6BE;"></i>
+                    <p class="skills">Skills</p>
+                </div>
+                <div>
+                    <p class="skills">Adobe Photoshop</p>
+                    <progress color="green" id="file" value="32" max="100"> 32% </progress>
+                </div>
+                <div>
+                    <p class="skills">Photography</p>
+                    <progress id="file" value="32" max="100"> 32% </progress>
+                </div>
+                <div>
+                    <p class="skills">Illustrator</p>
+                    <progress id="file" value="32" max="100"> 32% </progress>
+                </div>
+                <div>
+                    <p class="skills">Media</p>
+                    <progress id="file" value="32" max="100"> 32% </progress>
+                </div>
+            </div>
+            <div class="languages">
+                <div style="display: flex;align-items: center; gap: 30px;">
+                    <i class="fa-solid fa-earth-americas" style="color: #63E6BE;"></i>
+                    <p class="text">Languages</p>
+                </div>
+                <div class="skills">
+                    <p>English</p>
+                    <progress id="file" value="32" max="100"> 32% </progress>
+                </div>
+                <div class="skills">
+                    <p>Spanish</p>
+                    <progress id="file" value="32" max="100"> 32% </progress>
+                </div>
+                <div class="skills">
+                    <p>German</p>
+                    <progress id="file" value="32" max="100"> 32% </progress>
+                </div>
+            </div>
+
+             </div>
+        <div class="div2" >
+            <div class="workexp" style="display: flex;align-items: center; gap: 30px;">
+                <i class="fa-solid fa-suitcase fa-xl" style="color: #63E6BE;"></i>
+                <h1 class="mainfont">Work Experience</h1>
+            </div> 
+            <div>
+                <h3 class="mainfont">Front End Developer / w3schools.com</h3>
+            </div>
+            <div style="display: flex;align-items: center; gap: 30px;">
+                <i class="fa-solid fa-calendar" style="color: #63E6BE;"></i>
+                <p class="secondfont">Jan 2015 -<span> Current</span></p>
+            </div>
+            <div>
+                <p class="thirdfont">Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit <br> sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>
+            </div>
+            <hr>
+
+            <div>
+                <h3 class="mainfont">Front End Developer / w3schools.com</h3>
+            </div>
+            <div style="display: flex;align-items: center; gap: 30px;">
+                <i class="fa-solid fa-calendar" style="color: #63E6BE;"></i>
+                <p class="secondfont">Jan 2015 -<span> Current</span></p>
+            </div>
+            <div>
+                <p class="thirdfont">Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit <br> sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>
+            </div>
+            <hr>
+            <div>
+                <h3 class="mainfont">Front End Developer / w3schools.com</h3>
+            </div>
+            <div style="display: flex;align-items: center; gap: 30px;">
+                <i class="fa-solid fa-calendar" style="color: #63E6BE;"></i>
+                <p class="secondfont">Jan 2015 -<span> Current</span></p>
+            </div>
+            <div>
+                <p class="thirdfont">Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit <br> sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>
+            </div>
+            <hr>
+        </div>
+
+        <div class="div3"> 
+            <div class="div2" >
+                <div class="workexp" style="display: flex;align-items: center; gap: 30px;">
+                    <i class="fa-solid fa-graduation-cap fa-xl" style="color: #63E6BE;"></i>
+                    <h1 class="mainfont">Education</h1>
+                </div> 
+                <div>
+                    <h3 class="mainfont">W3Schools.com</h3>
+                </div>
+                <div style="display: flex;align-items: center; gap: 30px;">
+                    <i class="fa-solid fa-calendar" style="color: #63E6BE;"></i>
+                    <p class="secondfont">Forever</p>
+                </div>
+                <div>
+                    <p class="thirdfont">Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit <br> sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>
+                </div>
+                <hr>
+    
+                <div>
+                    <h3 class="mainfont">London Business School</h3>
+                </div>
+                <div style="display: flex;align-items: center; gap: 30px;">
+                    <i class="fa-solid fa-calendar" style="color: #63E6BE;"></i>
+                    <p class="secondfont">Jan 2015 -<span> Current</span></p>
+                </div>
+                <div>
+                    <p class="thirdfont">Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit <br> sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>
+                </div>
+                <hr>
+                <div>
+                    <h3 class="mainfont">School of coding</h3>
+                </div>
+                <div style="display: flex;align-items: center; gap: 30px;">
+                    <i class="fa-solid fa-calendar" style="color: #63E6BE;"></i>
+                    <p class="secondfont">Jan 2015 -<span> Current</span></p>
+                </div>
+                <div>
+                    <p class="thirdfont">Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit <br> sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>
+                </div>
+                <hr>
+            </div>
+        </div>
+        </div>
+
+        
+</body>
+</html>
